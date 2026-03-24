@@ -573,7 +573,7 @@ p {
 
 .trust-card {
     border-radius: 25px;
-    padding: 45px;
+    padding: 35px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -652,9 +652,14 @@ p {
 
 .floating-img {
     width: 339px;
-    height: 350px;
+    height: 300px;
     margin-top: auto;
     transform: translateX(20px);
+}
+@media (min-width: 1500px) {
+    .floating-img{
+        margin-left: 80px;
+    }
 }
 
 /* Counter Styles */
@@ -2334,12 +2339,12 @@ p {
     width: 100% !important;
     height: 100% !important;
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    align-items: end !important;
+    justify-content: start !important;
 }
 
 .parallexImg1{
-    width: 92% !important;
+    width: 80% !important;
 }
 .parallexImg2{
     width: 67% !important;
