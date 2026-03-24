@@ -15,13 +15,15 @@
     <link href="./owl.carousel.min.css" rel="stylesheet" asp-append-version="true" />
     <link href="./owl.theme.default.min.css" rel="stylesheet" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.css"/>
     <link rel="stylesheet" href="./site.css" asp-append-version="true" />
-    <link href="./animate.css" rel="stylesheet" asp-append-version="true" />
+    <!-- <link href="./animate.css" rel="stylesheet" asp-append-version="true" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
     <link href="./new_ui_style.css" rel="stylesheet" asp-append-version="true" />
   </head>
   <body id="theme-body" class="theme-bg light-theme">
     <main role="main" class="main">
-        <div class="page-wrapper" style="margin: 40px 35px 0">
+        <div class="page-wrapper">
           <section class="banner">
             <header class="main-header">
               <div class="header-container">
@@ -68,7 +70,6 @@
                 </div>
               </div>
             </header>
-    
             <div class="banner-bg-shape">
               <img
                 src="https://auregon.bravisthemes.com/wp-content/uploads/2025/12/h2-shape1.webp"
@@ -88,28 +89,27 @@
                 alt="Robot Hand"
               />
             </div>
-    
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-8">
+            <div class="container-banner">
+              <div class="row mx-0">
+                <div class="col-md-8">
                   <div class="banner-content">
                     <h1 class="hero-title manrope">
                       Revolutionizing the Way of Recruitment with
                       <span class="highlight">Technology and AI</span>
                     </h1>
-                    <p class="sub-text">
+                    <p class="sub-text" data-aos="fade-up">
                       A state-of-the-art software solution from Europe to help
                       recruiters around the world with personnel placement and staff
                       leasing.
                     </p>
     
                     <div class="hero-actions">
-                      <a href="#" class="theme-btn">
+                      <a href="#" class="theme-btn" data-aos="fade-left" >
                         Discover
                         <span class="btn-icon"
                           ><svg xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17 14" fill="none" > <path d="M0 6.9319L0 7.00332C0 8.2142 0.98507 9.19927 2.19576 9.19927H9.06635L8.08476 10.1809C7.22898 11.037 7.22882 12.4305 8.08533 13.2866C8.9429 14.1446 10.3328 14.1451 11.1909 13.2862L15.9584 8.51565C16.814 7.65964 16.8141 6.26724 15.958 5.41106L11.1906 0.643957C10.3329 -0.214577 8.94356 -0.214709 8.08566 0.643957C7.22822 1.501 7.22732 2.89261 8.08682 3.75047L9.07441 4.73631H2.19576C0.98507 4.73634 0 5.72141 0 6.9319ZM8.64543 3.1908C8.09592 2.64249 8.09552 1.75244 8.64467 1.2029C9.19381 0.653353 10.0826 0.653353 10.6318 1.2029L15.3991 5.97C15.9468 6.51812 15.947 7.40939 15.3993 7.95675L10.6316 12.7273C10.0834 13.2763 9.19341 13.2772 8.64427 12.7277L8.6437 12.7273C8.09622 12.1794 8.09595 11.2879 8.6437 10.7398L10.3002 9.08346C10.4135 8.96997 10.4475 8.80014 10.3859 8.65268C10.3247 8.50523 10.1805 8.40874 10.0207 8.40874H2.19576C1.42086 8.40874 0.790533 7.77841 0.790533 7.00332V6.9319C0.790533 6.1572 1.42086 5.52687 2.19576 5.52687H10.0298C10.1898 5.52687 10.334 5.43039 10.395 5.28253C10.456 5.13548 10.4222 4.96448 10.3091 4.85176L8.64543 3.1908Z" fill="#5B57E7"></path></svg></span>
                       </a>
-                      <div class="video-trigger">
+                      <div class="video-trigger" data-aos="fade-left" data-aos-delay="100">
                         <a
                           href="https://www.youtube.com/watch?v=SF4aHwxHtZ0"
                           class="anime-btn play-btn"
@@ -132,7 +132,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-md-4">
                   <div class="banner-visual">
                     <img
                       src="https://auregon.bravisthemes.com/wp-content/uploads/2025/12/globle.gif"
@@ -145,7 +145,7 @@
             </div>
           </section>
     
-          <section class="trust-secction pt-20">
+          <section class="trust-secction pt-20" data-aos="fade-up">
             <div class="trust-grid">
               <div class="trust-card card-stats fade-up">
                 <div class="card-image">
@@ -165,7 +165,6 @@
     
               <div
                 class="trust-card card-docs fade-up pb-0"
-                style="animation-delay: 0.2s"
               >
                 <div class="pr-5">
                   <h4>Full documentation support for all offerings</h4>
@@ -185,7 +184,6 @@
     
               <div
                 class="trust-card card-integrations fade-up"
-                style="animation-delay: 0.6s"
               >
                 <div
                   id="particles-container"
@@ -242,17 +240,16 @@
     
               <div
                 class="trust-card card-banner fade-up"
-                style="animation-delay: 0.4s"
               >
                 <div class="counter manrope">
-                  <span class="number uni-num">250</span
-                  ><span class="suffix uni-num">+</span>
+                  <span class="odometer number uni-num" data-count="250">0</span>
+                  <span class="suffix uni-num">+</span>
                 </div>
                 <p class="m-0 sub-text">
                   Thousands of engaged and loyal active users joining us every day
                 </p>
     
-                <a href="#" class="theme-btn">
+                <a href="#" class="theme-btn" data-aos="fade-left">
                   Explore more
                   <span class="btn-icon"
                     ><svg
@@ -549,7 +546,7 @@
               <div class="col-lg-6">
                 <div class="pxl-heading pl-lg-4">
                   <span class="pre-title manrope text-white">[ About ]</span>
-                  <h2 class="title manrope text-white">
+                  <h2 class="title manrope text-white" data-aos="fade-up-left" data-aos-duration="200">
                     Innovating Recruiting with
                     <span class="highlight">Swiss Precision</span>
                   </h2>
@@ -1063,7 +1060,7 @@
               <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center">
                   <span class="pre-title text-white">[ Project ]</span>
-                  <h2 class="title text-white">
+                  <h2 class="title text-white" data-aos="fade-up" data-aos-duration="300">
                     Turning Innovative
                     <img
                       src="https://auregon.bravisthemes.com/wp-content/uploads/2025/12/h2-img6.webp"
@@ -1715,7 +1712,7 @@
               <div class="row align-items-center">
                 <div class="col-lg-4 mb-5 mb-lg-0">
                   <span class="pre-title">[ Pricing ]</span>
-                  <h2 class="title">
+                  <h2 class="title" data-aos="zoom-out">
                     Transparent <span class="highlight">Pricing</span>
                   </h2>
                   <p style="color: #676767">
@@ -1850,7 +1847,7 @@
                     </li>
                   </ul>
     
-                  <a href="#" class="theme-btn mt-5">
+                  <a href="#" class="theme-btn mt-5" data-aos="fade-right">
                     Get started
                     <span class="btn-icon"
                       ><svg
@@ -2834,7 +2831,7 @@
     
           <footer class="pxl-footer">
             <div class="footer-cta">
-              <h2 class="title text-white">
+              <h2 class="title text-white" data-aos="zoom-out">
                 Connect With Us To Explore Chatbot Solutions
               </h2>
               <p>
@@ -2901,8 +2898,8 @@
                 </li>
               </ul>
               <div class="cta-buttons">
-                <a href="#" class="btn-long">Start Free Trial →</a>
-                <a href="#" class="btn-long">View All Services</a>
+                <a href="#" class="btn-long" data-aos="fade-left">Start Free Trial →</a>
+                <a href="#" class="btn-long" data-aos="fade-right">View All Services</a>
               </div>
             </div>
     
@@ -2991,6 +2988,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- <script src="./home.js" asp-append-version="true" defer></script> -->
     <script>
         (function ($) {
@@ -3178,6 +3176,16 @@
             });
           }
 
+          function odometeractive(){
+            $('.odometer').appear(function (e) {
+               var odo = $(".odometer");
+               odo.each(function () {
+                   var countNumber = $(this).attr("data-count");
+                   $(this).html(countNumber);
+               });
+            });
+          }
+
           $(document).ready(function () {
             databgcolor();
             fxheader();
@@ -3185,6 +3193,11 @@
             parallex();
             textscroll();
             customcursor();
+            odometeractive();
+            AOS.init({
+              offset: 50,
+              duration: 800,
+            });
           });
           
         })(jQuery);
@@ -3211,9 +3224,6 @@
                   }
               }
           })
-
-        // cursor animation
-        
 
         $("#newbar").on('click', function () {
             $("#newbar").hide();

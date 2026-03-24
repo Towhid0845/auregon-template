@@ -21,6 +21,7 @@ body {
     /* cursor: none; */
 }
 
+
 .pt-20{
     padding-top: 20px;
 }
@@ -64,10 +65,13 @@ p {
     font-size: 20px;
     max-width: 700px;
     margin-bottom: 40px;
-    line-height: 30px;
-    
+    line-height: 30px;   
 }
-
+@media (max-width: 767px) {
+    .sub-text{
+        font-size: 17px;
+    }
+}
 .highlight {
     font-family: "Manrope", sans-serif !important;
     background: linear-gradient(90deg, #A493FF 0%, #5B57E7 47%, #72BEF9 100%);
@@ -85,17 +89,11 @@ p {
     align-items: center;
     gap: 10px;
     font-weight: 600;
-    transition: 0.3s;
+    transition: transform 0.15s ease, filter 0.2s ease;
     position: relative;
     padding: 15px 69px 15px 26px;
     width: fit-content;
 }
-
-    .theme-btn:hover {
-        transform: translateY(-2px);
-        filter: brightness(1.2);
-        color: #fff;
-    }
 
 .btn-icon {
     position: absolute;
@@ -112,11 +110,37 @@ p {
     overflow: hidden;
 }
 
-    .btn-icon svg {
-        display: block;
+.btn-icon svg {
+    display: block;
+}
+@media (max-width: 991px) {
+    .theme-btn {
+        padding: 12px 60px 12px 20px;
     }
 
-/* On hover: play the full exit-then-enter animation */
+    .btn-icon{
+        top: 7px;
+        bottom: 7px;
+        right: 7px;
+    }
+
+    .btn-icon svg{
+        width: 15px;
+        height: 12px;
+    }
+}
+@media (max-width: 575px) {
+    .theme-btn {
+        font-size: 14px;
+    }
+}
+
+.theme-btn:hover {
+    transform: translateY(-2px) !important;
+    filter: brightness(1.2);
+    color: #fff;
+}
+
 .theme-btn:hover .btn-icon svg {
     animation: iconLoop 0.4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
@@ -150,6 +174,15 @@ p {
     max-width: 1620px;
     padding: 60px 0;
     margin: 0 auto;
+}
+.page-wrapper{
+    margin: 40px 40px 0;
+}
+
+@media (max-width:  1599px) {
+    .page-wrapper{
+        margin: 15px 15px 0;
+    }
 }
 /*============================*/
 /* header section css*/
@@ -283,8 +316,23 @@ p {
 /*============================*/
 /*banner section css*/
 /*============================*/
+.container-banner{
+    max-width: 90%;
+    margin: 0 auto;
+}
+@media (max-width: 1400px) {
+    .container-banner{
+        max-width: 95%;
+    }
+}
+@media (max-width: 1200px) {
+    .container-banner{
+        max-width: 97%;
+    }
+}
+
 .banner {
-        position: relative;
+    position: relative;
     min-height: 800px;
     display: flex;
     align-items: center;
@@ -293,16 +341,21 @@ p {
     padding-top: 150px; /* Room for the absolute header */
     padding: 100px 0;
     border-radius: 25px;
-/*    background-image: url("https://auregon.bravisthemes.com/wp-content/uploads/2025/12/h2-shape2.webp");
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    background-size: contain;*/
+}
+@media (max-width: 1199px) {
+    .banner{
+        min-height: 625px;
+    }
+    .banner-content{
+        padding-top: 50px;
+    }
 }
 
 .banner-bg-shape {
     position: absolute;
     top: 0;
     right: 0;
+    bottom: 0;  
     width: 100%;
     z-index: 0;
     opacity: 1;
@@ -310,6 +363,7 @@ p {
 
 .banner-bg-shape img {
     width: 100%;
+    height: 100%;
     border-radius: 25px;
 }
 .banner-bg-shape2 {
@@ -321,11 +375,6 @@ p {
     opacity: 0.7;
 }
 
-.banner-bg-shape img {
-    width: 100%;
-    border-radius: 25px;
-}
-
 .banner-robot-hand {
     position: absolute;
     bottom: 0;
@@ -333,6 +382,21 @@ p {
     width: auto;
     z-index: 1;
     opacity: 1;
+    max-width: 45%;
+}
+
+.banner-robot-hand img{
+    width: 100%
+}
+@media (max-width: 991px) {
+    .banner-robot-hand{
+        bottom: 50px;   
+    }
+}
+@media (max-width: 767px) {
+    .banner-robot-hand{
+        max-width: 75%;
+    }
 }
 
 
@@ -348,7 +412,31 @@ p {
     color: var(--text-white);
     margin-bottom: 25px;
 }
-
+@media (max-width: 1599px) {
+    .hero-title {
+        font-size: 65px;
+    }
+}
+@media (max-width: 1399px) {
+    .hero-title {
+        font-size: 60px;
+    }
+}
+@media (max-width: 1199px) {
+    .hero-title {
+        font-size: 50px;
+    }
+}
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 42px;
+    }
+}
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 30px;
+    }
+}
 /* Buttons */
 .hero-actions {
     display: flex;
@@ -364,44 +452,73 @@ p {
     font-weight: 500;
 }
 
-.video-trigger:hover {
-    transform: translateY(-2px);
-}
+/* .video-trigger:hover {
+    transform: translateX(2px) !important;
+} */
 
 .play-btn {
     width: 50px;
     height: 50px;
-/*    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;*/
 }
 
-/*    .play-btn:hover {
-        background: white;
-        color: var(--bg-dark);
-    }*/
-    .play-btn svg{
-        width: 24px;
-        height: 24px;
+.play-btn svg{
+    width: 24px;
+    height: 24px;
+}
+@media (max-width: 991px) {
+    .play-btn{
+        width: 45px;
+        height: 45px;
     }
+}
+@media (max-width: 767px) {
+    .play-btn{
+        width: 40px;
+        height: 40px;
+    }
+}
     /* Visuals Area */
     .banner-visual {
         position: relative;
         height: 100%;
     }
 
+@media (max-width: 991px) {
+    .banner-visual {
+        min-height: 400px;
+        margin-top: 50px;
+    }
+}
+@media (max-width: 575px) {
+    .banner-visual {
+        min-height: 300px;
+    }
+}
+    
+
 .globe-img {
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     position: absolute;
     top: -50px;
     right: 0;
     mix-blend-mode: color-dodge;
     z-index: 2;
+}
+@media (max-width: 1399px) {
+    .globe-img{
+        top: 0;
+    }
+}
+@media (max-width: 767px) {
+    .globe-img{
+        width: 40%;
+    }
+}
+@media (max-width: 576px) {
+    .globe-img{
+        width: 60%;
+    }
 }
 
 .robot-hand {
@@ -424,8 +541,34 @@ p {
     gap: 20px;
 }
 
-.trust-container {
+@media (max-width: 1199px) {
+    .trust-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
 
+    .trust-grid .card-stats {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .trust-grid .card-docs {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* Banner goes to row 2 — full width strip */
+    .trust-grid .card-banner {
+        grid-column: span 2;
+        grid-row: 2;
+    }
+
+    /* Integrations goes to row 3 — full width */
+    .trust-grid .card-integrations {
+        grid-column: span 2;
+        grid-row: 3;
+    }
+    
 }
 
 .trust-card {
@@ -528,14 +671,17 @@ p {
     -webkit-text-stroke-color: #5B57E7;
 }
 
+.odometer-digit-inner{
+    overflow: visible !important;
+}
 /* Orbit Animation Logic */
 .orbit-container {
     position: absolute;
     bottom: -5%;
     right: -55%;
-/*    margin: 100px;*/
     height: 200px;
 }
+
 
 .orbit-circle {
     width: 70%;
@@ -543,9 +689,6 @@ p {
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 50%;
     position: absolute;
-    /*    position: absolute;
-    bottom: -150px;
-    right: -100px;*/
     z-index: -1;
     transform: translate(-50%, -50%);
     animation: rotateOrbit 10s linear infinite;
@@ -555,14 +698,10 @@ p {
     height: 800px;
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 50%;
-/*    position: absolute;
-    bottom: -150px;
-    right: -100px;*/
     z-index: -1;
     transform: translate(-50%, -50%);
     animation: rotateOrbit 10s linear infinite;
 }
-
 .orbiting-icon {
     position: absolute;
     width: 40px;
@@ -576,8 +715,83 @@ p {
     position: absolute;
     bottom: 17%;
     right: 66%;
-/*    display: none;*/
 }
+
+@media (max-width: 1699px) {
+    .orbit-container{
+        right: -65%;
+    }
+}
+
+@media (max-width: 1499px) {
+    .orbit-circle2{
+        width: 700px;
+        height: 700px;
+    }
+    .scene-img {
+        width: 75%;
+    }
+}
+@media (max-width: 1399px) {
+    .orbit-circle2 {
+        width: 650px;
+        height: 650px;
+    }
+    .scene-img {
+        right: 63%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .orbit-circle2 {
+        width: 900px;
+        height: 900px;
+    }
+    .trust-grid .card-integrations{
+        min-height: 700px;
+    }
+    .orbit-container {
+        right: -40%;
+    }
+        .scene-img {
+            width: 65%;
+        }
+    
+    
+}
+@media (max-width: 991px) {
+    .orbit-container {
+        right: -60%;
+    }
+}
+
+@media (max-width: 767px) {
+    .orbit-container {
+        right: -65%;
+    }
+    .orbit-circle2 {
+        width: 650px;
+        height: 650px;
+    }
+    .trust-grid .card-integrations {
+        min-height: 600px;
+    }
+    .scene-img {
+        width: 80%;
+        bottom: 15%;
+    }
+}
+
+@media (max-width: 575px) {
+    .scene-img {
+        width: 70%;
+    }
+    .orbit-container {
+        right: -85%;
+    }
+}
+
+
 
 /* Position icons around the circle */
 .slack {
@@ -2056,15 +2270,6 @@ p {
 
         .hero-actions {
             justify-content: center;
-        }
-
-        .hero-title {
-            font-size: 42px;
-        }
-
-        .banner-visual {
-            min-height: 400px;
-            margin-top: 50px;
         }
 
         .robot-hand {
